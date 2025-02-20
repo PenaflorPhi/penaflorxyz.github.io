@@ -1,0 +1,50 @@
+/* Container for all three code boxes */
+.code-container {
+    display: flex;
+    justify-content: space-between; /* Evenly spaces the columns */
+    gap: 100px; /* Adds spacing between code boxes */
+    margin-top: 20px;
+}
+
+/* Individual code box styling */
+.code-box {
+    flex: 1; /* Makes all boxes equal width */
+    min-width: 300px; /* Ensures readability on smaller screens */
+}
+
+/* Code block styling */
+pre {
+    background-color: #16161e;
+    color: #c0caf5;
+    padding: 15px;
+    border-radius: 5px;
+    font-family: 'Fira Code', monospace;
+    font-size: 14px;
+    overflow-x: auto;
+    border: 1px solid #3b4261;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    
+    white-space: pre-wrap;
+    tab-size: 4;
+    width: 100%;
+}
+
+/* Ensures proper text alignment inside code blocks */
+pre code {
+    display: block;
+    padding: 0px;
+    color: #7aa2f7;
+    text-align: left;
+}
+
+@media (max-width: 900px) {
+    .code-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .code-box {
+        width: 100%;
+        max-width: 600px; /* Prevents code from being too stretched */
+    }
+}
